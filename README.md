@@ -1,11 +1,11 @@
-# Application Code Snippet Generator Agent
+# 🧠 Application Code Snippet Generator Agent
 
 An AI-powered web application that generates programming code snippets from natural language input.  
 Users can type a request and instantly receive a relevant code snippet.
 
 ---
 
-## Features
+## 🚀 Features
 
 - Natural language to code generation  
 - Generates Python code snippets  
@@ -15,7 +15,7 @@ Users can type a request and instantly receive a relevant code snippet.
 
 ---
 
-## Tech Stack
+## 🧰 Tech Stack
 
 - Python  
 - Flask  
@@ -24,19 +24,33 @@ Users can type a request and instantly receive a relevant code snippet.
 
 ---
 
-## Screenshots
+## 🖼️ Screenshots
 
 ### Home Page
-![Home](screenshots/homescreen.png)
+![Home](screenshots/Homescreen.png)
 
 ### Working
 ![Generated Code](screenshots/result.png)
 
 ---
 
+## 📁 Project Structure  
+application-code-snippet-generator-agent/  
+├── app.py  
+├── requirements.txt  
+├── .env.example  
+├── .gitignore  
+├── README.md  
+├── LICENSE  
+├── templates/  
+│ └── index.html  
+├── static/  
+│ ├── style.css   
+└── screenshots  
+
 ---
 
-## Installation
+## ⚙️ Installation
 
 ```bash
 git clone https://github.com/kaushikbargaway/application-code-snippet-generator-agent.git
