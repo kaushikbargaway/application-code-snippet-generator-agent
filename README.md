@@ -34,6 +34,8 @@ Users can type a request and instantly receive a relevant code snippet.
 
 ---
 
+---
+
 ## Installation
 
 ```bash
@@ -41,12 +43,24 @@ git clone https://github.com/kaushikbargaway/application-code-snippet-generator-
 cd application-code-snippet-generator-agent
 python -m venv venv
 venv\Scripts\activate      # Windows
-source venv/bin/activate  # Mac/Linux
+source venv/bin/activate  # Linux/Mac
 pip install -r requirements.txt
+```
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License**.
+
+---
 
 ## 👤 Author
 
 Kaushik Kumar  
 B.E. – Information Science Engineering  
 GitHub: https://github.com/kaushikbargaway  
-LinkedIn: https://www.linkedin.com/in/kaushikbargaway 
+LinkedIn: https://www.linkedin.com/in/kaushikbargaway  
+
+
+
+
