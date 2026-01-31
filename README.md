@@ -29,8 +29,14 @@ Users can type a request and instantly receive a relevant code snippet.
 ### Home Page
 ![Home](screenshots/Homescreen.png)
 
-### Working
-![Generated Code](screenshots/result.png)
+### Input Request & Generated Code Snippet
+![Input Request & Generated Code Snippet](screenshots/InputRequest&GeneratedCodeSnippet.png)
+
+### Generated Code Explaination
+![Generated Code Explaination](screenshots/GeneratedCodeExplaination.png)
+
+### Backend System
+![Backend System](screenshots/BackendSystem.png)
 
 ---
 
