@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Code Snippet Generator</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🤖 AI Code Snippet Generator</h1>
+            <p>Enter a natural language request to generate Python code snippets instantly.</p>
+        </header>
+
+        <main>
+            <div class="input-area">
+                <textarea id="userInput" placeholder="e.g., create a simple flask web server..."></textarea>
+                <button id="generateBtn">Generate Code</button>
+            </div>
+            <div class="output-area">
+                <div id="loader" class="hidden"></div>
+                <div id="responseContainer"></div>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        document.getElementById('generateBtn').addEventListener('click', async () => {
+            const userInput = document.getElementById('userInput').value;
+            const responseContainer = document.getElementById('responseContainer');
+            const loader = document.getElementById('loader');
+
+            if (!userInput) {
+                alert('Please enter a request.');
+                return;
+            }
+
+            // Show loader and clear previous response
+            loader.classList.remove('hidden');
+            responseContainer.innerHTML = '';
+            
+            try {
+                const response = await fetch('/generate', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ query: userInput })
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                // Use the 'marked' library to convert Markdown text to HTML
+                responseContainer.innerHTML = marked.parse(data.response);
+            } catch (error) {
+                console.error('Error:', error);
+                responseContainer.innerText = 'Failed to get a response. Please check the console for details.';
+            } finally {
+                // Hide loader
+                loader.classList.add('hidden');
+            }
+        });
+    </script>
+</body>
+</html>

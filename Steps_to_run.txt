@@ -1,0 +1,15 @@
+In the project folder, open terminal and run the following command with your GROQ API Key
+$env:GROQ_API_KEY="gsk_YourActualApiKeyHere"
+
+Execute the file app.py in the same terminal using the command
+python app.py
+
+If everything is correct, your terminal will display a message similar to this:
+
+ * Serving Flask app 'app'
+ * Running on http://127.0.0.1:5000
+Open your web browser (like Chrome, Firefox, or Edge).
+
+Copy and paste the URL from your terminal: http://127.0.0.1:5000
+
+Press Enter.
